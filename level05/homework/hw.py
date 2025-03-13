@@ -32,3 +32,5 @@ else:
 #5) კომენტარებით დაწერეთ რას გამოიტანს შემდეგი გამოსახულება: True or True and False or True and False and False and True or False
 
 print(True or True and False or True and False and False and True or False)
+#პირველ რიგში ვადარებთ True and False და მიიღება: True or False or False or False or False or False
+# შემდგომ or-ებს შევადარებთ და True იქნება სწორი პასუხი რადგანაც True or False_დან გამოდის True

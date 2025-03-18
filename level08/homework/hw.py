@@ -1,41 +1,23 @@
 #For loop-ის დახმარებით შექმენით პროგრამა, სადაც მომხმარებელი შემოიტანს რიცხვს (50-ის ჩათვლით, თუ არა დაუპრინტეთ, რომ თავიდან შეიყვანოს), და თქვენ გამოიტანეთ ამ რიცხვის ჯერადები 100-ის ჩათვლით.
 
 num = int(input('enter number'))
-if num>50:
-    print("please try again")
-else:    
+if num<=50:
     for i in range(1,101):
         if i%num == 0:
             print(i)
 
+else:    
+    print("please try again")
 
 
 #შექმენით პატარა თამაში, სადაც თქვენ შექმნით რაიმე რიცხვების თანმიმდევრობას (ოთხნიშნა integer-რიცხვი), და მომხმარებელმა კი უნდა გამოიცნოს ეს თანმიმდევრობა (გამოიყენეთ While loop)
 
-import random
+num = int(input("enter sequences"))
+num1 = 1020
+while num!=num1:
+    print("arasworia")
+    num = int(input("enter sequences"))
+if num == num1:
+    print("shemotanili mimdevroba sworia")
+    
 
-# გენერირება ოთხნიშნა რიცხვების თანმიმდევრობის
-sequence = [random.randint(1000, 9999) for _ in range(5)]
-
-print("შექმნილია რიცხვების თანმიმდევრობა. სცადეთ მისი გამოცნობა!")
-print("თამაში დაიწყება ახლა...")
-
-# მომხმარებლის პროგრესი
-attempts = 0
-
-while True:
-    try:
-        # მომხმარებელი აქრობს იდენტიფიცირებულ რიცხვებს
-        guess = int(input("გამოიცანით ოთხნიშნა რიცხვი: "))
-        attempts += 1
-        
-        # შეამოწმეთ, რომ მომხმარებელი სწორად გამოიცნო
-        if guess == sequence[attempts - 1]:
-            print(f"გილოცავ! გამოიცანით რიცხვი: {guess}")
-            if attempts == len(sequence):
-                print(f"თქვენ გაიარეთ თამაში {attempts} ცდაში.")
-                break
-        else:
-            print(f"არასწორი რიცხვი. სცადეთ კიდევ.")
-    except ValueError:
-        print("გთხოვთ, შეიყვანოთ ოთხნიშნა რიცხვი!")
